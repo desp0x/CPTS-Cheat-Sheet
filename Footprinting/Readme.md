@@ -5,6 +5,7 @@
 | Command | Description |
 |------|------------|
 | `curl -s https://crt.sh/?q=<target-domain>&output=json \| jq .` | Certificate transparency. |
+| `curl -s https://crt.sh/?q=inlanefreight.com&output=json \| jq . \| grep name \| cut -d":" -f2 \| grep -v "CN=" \| cut -d'"' -f2 \| awk '{gsub(/\\n/,"\n");}1;' \| sort -u` | Unique Subdomain |
 | `for i in $(cat ip-addresses.txt);do shodan host $i;done` | Scan each IP address in a list using Shodan. |
 
 ---
