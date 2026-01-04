@@ -65,6 +65,7 @@
 | `dig any <domain.tld> @<nameserver>` | ANY request to the specific nameserver. |
 | `dig axfr <domain.tld> @<nameserver>` | AXFR request to the specific nameserver. |
 | `dnsenum --dnsserver <nameserver> --enum -p 0 -s 0 -o found_subdomains.txt -f ~/subdomains.list <domain.tld>` | Subdomain brute forcing. |
+| `dnsenum --dnsserver 10.129.14.128 --enum -p 0 -s 0 -o subdomains.txt -f /opt/useful/seclists/Discovery/DNS/subdomains-top1million-110000.txt inlanefreight.htb`| Command|
 
 ---
 
