@@ -29,6 +29,7 @@
 
 | Command | Description |
 |------|------------|
+| `rpcclient -U "" <FQDN/IP>` | Interaction with the target using RPC. |
 | `srvinfo`	| Server information.|
 | `enumdomains`	| Enumerate all domains that are deployed in the network.|
 | `querydominfo` |	Provides domain, server, and user information of deployed domains.|
@@ -39,7 +40,6 @@
 | `for i in $(seq 500 1100);do rpcclient -N -U "" 10.129.14.128 -c "queryuser 0x$(printf '%x\n' $i)" \| grep "User Name\|user_rid\|group_rid" && echo "";done` | Brute Forcing User RIDs |
 | `smbclient -N -L //<FQDN/IP>` | Null session authentication on SMB. |
 | `smbclient //<FQDN/IP>/<share>` | Connect to a specific SMB share. |
-| `rpcclient -U "" <FQDN/IP>` | Interaction with the target using RPC. |
 | `samrdump.py <FQDN/IP>` | Username enumeration using Impacket scripts. |
 | `smbmap -H <FQDN/IP>` | Enumerating SMB shares. |
 | `crackmapexec smb <FQDN/IP> --shares -u '' -p ''` | Enumerating SMB shares using null session authentication. |
