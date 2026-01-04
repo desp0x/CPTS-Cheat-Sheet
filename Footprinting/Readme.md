@@ -37,7 +37,6 @@
 | `enumdomusers` | Enumerates all domain users.|
 | `queryuser <RID>`	| Provides information about a specific user.|
 | `for i in $(seq 500 1100);do rpcclient -N -U "" 10.129.14.128 -c "queryuser 0x$(printf '%x\n' $i)" \| grep "User Name\|user_rid\|group_rid" && echo "";done` | Brute Forcing User RIDs |
-
 | `smbclient -N -L //<FQDN/IP>` | Null session authentication on SMB. |
 | `smbclient //<FQDN/IP>/<share>` | Connect to a specific SMB share. |
 | `rpcclient -U "" <FQDN/IP>` | Interaction with the target using RPC. |
