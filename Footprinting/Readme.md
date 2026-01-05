@@ -74,6 +74,7 @@
 | Command | Description |
 |------|------------|
 | `telnet <FQDN/IP> 25` | Connect to SMTP service. |
+| `smtp-user-enum -M RCPT -U users.list -t 10.129.203.12 -D inlanefreight.htb` | SMTP User-Enum |
 
 ---
 
